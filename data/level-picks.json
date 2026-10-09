@@ -1,0 +1,41 @@
+{
+  "level1": [
+    "1 Nephi 1:1", "2 Nephi 2:25", "2 Nephi 2:27", "1 Nephi 3:7",
+    "Enos 1:4", "Mosiah 3:19", "Mosiah 18:9", "Alma 7:11",
+    "Alma 32:21", "Helaman 5:12", "Ether 12:27", "2 Nephi 25:23",
+    "Moroni 10:4", "Moroni 10:5", "Moroni 10:32"
+  ],
+  "level2": [
+    "3 Nephi 27:27", "2 Nephi 31:20", "Alma 41:10", "Alma 42:8",
+    "Mosiah 5:2", "2 Nephi 25:26", "Mosiah 2:17", "Mosiah 4:27",
+    "Alma 37:6", "Alma 37:37", "Alma 36:3", "3 Nephi 12:48",
+    "3 Nephi 11:10", "1 Nephi 19:23", "1 Nephi 17:3", "2 Nephi 28:30",
+    "2 Nephi 32:3", "2 Nephi 32:9", "2 Nephi 26:33", "2 Nephi 2:11",
+    "2 Nephi 4:15", "Ether 12:6", "Moroni 7:47", "Moroni 7:45",
+    "Moroni 7:16"
+  ],
+  "level3": [
+    "1 Nephi 8:10", "1 Nephi 11:17", "1 Nephi 11:25", "1 Nephi 21:16",
+    "2 Nephi 1:15", "2 Nephi 2:8", "2 Nephi 4:34", "2 Nephi 9:28",
+    "2 Nephi 9:39", "2 Nephi 9:51", "2 Nephi 31:21", "Jacob 2:18",
+    "Mosiah 2:41", "Mosiah 4:9", "Mosiah 4:30", "Mosiah 5:13",
+    "Mosiah 18:8", "Mosiah 24:15", "Alma 5:14", "Alma 5:26",
+    "Alma 7:12", "Alma 22:18", "Alma 26:12", "Alma 32:28",
+    "Alma 34:32", "Alma 36:18", "Alma 36:20", "Alma 37:35",
+    "Alma 48:17", "Alma 56:47", "3 Nephi 5:13", "3 Nephi 9:20",
+    "3 Nephi 18:15", "3 Nephi 27:20", "4 Nephi 1:15", "Moroni 6:4",
+    "Moroni 7:48", "Moroni 8:18", "Moroni 10:3", "Moroni 10:33"
+  ],
+  "level4": [
+    "Jarom 1:5",
+    "Mosiah 22:7",
+    "Alma 2:19",
+    "Alma 50:14",
+    "Alma 62:42",
+    "Helaman 1:20",
+    "3 Nephi 4:7",
+    "4 Nephi 1:46",
+    "Mormon 2:8",
+    "Ether 10:10"
+  ]
+}
