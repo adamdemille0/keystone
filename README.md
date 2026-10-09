@@ -11,8 +11,8 @@ Each day's game has 4 levels worth 100, 200, 300, and 400 points (1,000 total).
 - A finished day can't be replayed; opening it shows the result. Progress is saved after every level,
   so leaving mid-game resumes where you left off.
 - Results live in the player's browser (localStorage), so they don't carry over between devices.
-- **Test mode (currently ON):** `TEST_MODE` at the top of `src/storage.js` keeps results in memory only,
-  so refreshing the page lets you replay any day. Set it to `false` before launch.
+- **Test mode (currently OFF):** setting `TEST_MODE` to `true` at the top of `src/storage.js` keeps
+  results in memory only, so refreshing the page lets you replay any day. Keep it `false` when live.
 - **Share result** copies a spoiler-free summary (e.g. `Keystone #12 · 812/1,000` plus one emoji per level).
 
 ## Running locally

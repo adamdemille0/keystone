@@ -3,7 +3,7 @@
 
 // TESTING: while true, results are kept in memory only, so refreshing the page
 // lets you replay any day. Set to false before launch to save results for real.
-export const TEST_MODE = true;
+export const TEST_MODE = false;
 
 const KEY = 'keystone-days';
 const LEVELS = 4;
