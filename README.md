@@ -61,7 +61,14 @@ before any repeats, so a level with 15 verses repeats every 15 days.
 | `src/storage.js` | Each day's progress and results, plus best score and games played (localStorage). |
 | `src/share.js` | The share text and share/copy button. |
 | `src/main.js` | Screens and UI. |
-| `scripts/make-icons.mjs` | Regenerates the PNG icons in `public/icons/` (`npm run icons`). |
+| `brand/keystone-logo.png` | Original logo (not shipped). |
+| `scripts/make-brand-images.ps1` | Builds `public/logo.jpg` and the app icons from the original logo. Run on Windows with `powershell -ExecutionPolicy Bypass -File scripts/make-brand-images.ps1`. |
+
+### Look and feel
+
+Times New Roman throughout, with colors taken from the logo (defined at the top of `src/style.css`):
+navy `#162840` for text and buttons, tan `#F5EFE4` for the background, and gold `#B99854` for thin
+accent lines only (it's too light to read as text on tan).
 
 ### Scoring
 

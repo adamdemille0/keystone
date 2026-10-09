@@ -19,9 +19,15 @@ function escapeHtml(text) {
   return String(text).replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 }
 
-function show(html) {
-  app.innerHTML = html;
+const LOGO = '<img src="/logo.jpg" alt="Keystone: Daily Book of Mormon Search" width="1000" height="193" />';
+
+function show(html, { withHeader = true } = {}) {
+  const header = withHeader
+    ? `<header class="top-bar"><button class="logo-button" id="logo-home" aria-label="Keystone home">${LOGO}</button></header>`
+    : '';
+  app.innerHTML = header + html;
   window.scrollTo(0, 0);
+  on('logo-home', showHome);
   app.querySelector('h1, h2')?.focus();
 }
 
@@ -53,12 +59,15 @@ function showHome() {
   const today = todayNumber();
 
   if (today < 1) {
-    show(`
+    show(
+      `
       <section class="screen home">
-        <h1 tabindex="-1">Keystone</h1>
+        <h1 class="logo" tabindex="-1">${LOGO}</h1>
         <p class="tagline">The first daily game starts ${formatDay(1, { month: 'long', day: 'numeric' })}.</p>
       </section>
-    `);
+    `,
+      { withHeader: false },
+    );
     return;
   }
 
@@ -69,11 +78,13 @@ function showHome() {
       ? `Continue today's game (level ${saved.length + 1})`
       : "Play today's game";
 
-  show(`
+  show(
+    `
     <section class="screen home">
-      <h1 tabindex="-1">Keystone</h1>
+      <h1 class="logo" tabindex="-1">${LOGO}</h1>
+      <div class="rule"></div>
+      <p class="eyebrow">Day ${today} · ${formatDay(today)}</p>
       <p class="tagline">Read a verse from the Book of Mormon. Guess where it's from.</p>
-      <p class="day-label">Day #${today} · ${formatDay(today)}</p>
       <ul class="rules">
         <li>A new game every day: 4 verses worth ${LEVEL_MAX_POINTS.join(', ')} points.</li>
         <li>The closer your guess, the more points you earn.</li>
@@ -84,7 +95,9 @@ function showHome() {
       ${statsLine()}
       ${TEST_MODE ? '<p class="test-badge">Test mode: results reset when you refresh</p>' : ''}
     </section>
-  `);
+  `,
+    { withHeader: false },
+  );
   on('play-today', () => openDay(today));
   on('archive', showArchive);
 }
@@ -112,12 +125,10 @@ function showArchive() {
 
   show(`
     <section class="screen archive">
-      <button class="link" id="back">← Home</button>
       <h2 tabindex="-1">Past games</h2>
       <ul class="day-list">${rows}</ul>
     </section>
   `);
-  on('back', showHome);
   app.querySelectorAll('.day-row').forEach((button) => {
     button.addEventListener('click', () => openDay(Number(button.dataset.day)));
   });
@@ -142,7 +153,6 @@ function showLevel() {
   const max = LEVEL_MAX_POINTS[level];
   show(`
     <section class="screen level">
-      <button class="link" id="back">← Home</button>
       <header class="level-header">
         <h2 tabindex="-1">Level ${level + 1} of 4</h2>
         <span class="pill">Up to ${max} pts</span>
@@ -161,7 +171,6 @@ function showLevel() {
       </form>
     </section>
   `);
-  on('back', showHome);
 
   const bookSelect = document.getElementById('book');
   const chapterSelect = document.getElementById('chapter');
