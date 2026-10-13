@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Personal Best badge">
+  <circle cx="60" cy="60" r="50" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <circle cx="60" cy="60" r="43" fill="none" stroke="#B99854" stroke-width="2"/>
+  <polygon points="60.0,29.0 63.8,38.7 74.3,39.4 66.2,46.0 68.8,56.1 60.0,50.5 51.2,56.1 53.8,46.0 45.7,39.4 56.2,38.7" fill="#B99854" stroke="#162840" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M50 66V84M60 64V90M70 66V84" stroke="#162840" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

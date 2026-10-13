@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Missionary: 5 shares badge">
+  <polygon points="14,14 106,14 88,108 32,108" fill="#FBF8F2" stroke="#162840" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="24,22 96,22 81.5,100 38.5,100" fill="none" stroke="#B99854" stroke-width="1.5" stroke-linejoin="round"/>
+  <polygon points="30,27 90,27 77,95 43,95" fill="none" stroke="#B99854" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M35 42L85 30L68 51ZM85 30L55 45L56 54L62 48" fill="#FBF8F2" stroke="#162840" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="60" y="85" text-anchor="middle" font-family="Times New Roman, Times, serif" font-size="36" font-weight="bold" fill="#162840">5</text>
+</svg>

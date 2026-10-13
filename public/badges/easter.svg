@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Easter badge">
+  <path d="M16 12H104V54C104 82 85 99 60 110C35 99 16 82 16 54Z" fill="#FBF8F2" stroke="#162840" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M25 21H95V54C95 76 80 90 60 100C40 90 25 76 25 54Z" fill="none" stroke="#B99854" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="40" cy="36" r="6" fill="#B99854"/>
+  <path d="M40 24V27M28 36H31M31.5 27.5L33.6 29.6M48.5 27.5L46.4 29.6" stroke="#B99854" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M30 80L32 64L40 54L52 48L64 46L76 50L84 58L88 68L90 80Z" fill="#FBF8F2" stroke="#162840" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M40 80V68A8 8 0 0 1 56 68V80Z" fill="#162840"/>
+  <circle cx="71" cy="70" r="10" fill="#FBF8F2" stroke="#162840" stroke-width="3"/>
+  <path d="M66 66A6 6 0 0 1 72 63" fill="none" stroke="#B99854" stroke-width="2" stroke-linecap="round"/>
+  <path d="M30 80H90" stroke="#162840" stroke-width="3" stroke-linecap="round"/>
+</svg>

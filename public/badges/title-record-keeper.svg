@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Record Keeper title badge">
+  <circle cx="60" cy="60" r="50" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <circle cx="60" cy="60" r="41" fill="none" stroke="#B99854" stroke-width="7"/>
+  <rect x="47" y="31" width="34" height="46" rx="2" fill="#FBF8F2" stroke="#162840" stroke-width="2.5"/>
+  <rect x="43" y="36" width="34" height="46" rx="2" fill="#FBF8F2" stroke="#162840" stroke-width="2.5"/>
+  <rect x="39" y="41" width="34" height="46" rx="2" fill="#FBF8F2" stroke="#162840" stroke-width="3"/>
+  <path d="M48 54H66M48 61H66M48 68H66M48 75H60" stroke="#B99854" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="39" cy="50" r="3.5" fill="none" stroke="#162840" stroke-width="2.5"/>
+  <circle cx="39" cy="64" r="3.5" fill="none" stroke="#162840" stroke-width="2.5"/>
+  <circle cx="39" cy="78" r="3.5" fill="none" stroke="#162840" stroke-width="2.5"/>
+</svg>

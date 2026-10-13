@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="So Close badge">
+  <circle cx="60" cy="60" r="50" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <circle cx="60" cy="60" r="43" fill="none" stroke="#B99854" stroke-width="2"/>
+  <path d="M30 60H52M44 51L54 60L44 69" fill="none" stroke="#162840" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 60H68M76 51L66 60L76 69" fill="none" stroke="#162840" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

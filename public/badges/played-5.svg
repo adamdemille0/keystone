@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Games Played: 5 games badge">
+  <polygon points="14,14 106,14 88,108 32,108" fill="#FBF8F2" stroke="#162840" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="24,22 96,22 81.5,100 38.5,100" fill="none" stroke="#B99854" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M60 35C54 31 45 31 38 33V49C45 47 54 47 60 51C66 47 75 47 82 49V33C75 31 66 31 60 35ZM60 35V51" fill="#FBF8F2" stroke="#162840" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="60" y="85" text-anchor="middle" font-family="Times New Roman, Times, serif" font-size="36" font-weight="bold" fill="#162840">5</text>
+</svg>

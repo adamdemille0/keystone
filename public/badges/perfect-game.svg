@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Perfect Game badge">
+  <circle cx="60" cy="60" r="50" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <circle cx="60" cy="60" r="43" fill="none" stroke="#B99854" stroke-width="2"/>
+  <path d="M54 86A27 27 0 0 1 38.5 44M66 86A27 27 0 0 0 81.5 44" fill="none" stroke="#162840" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="39.9" cy="82.3" rx="5.5" ry="2.6" transform="rotate(-168 39.9 82.3)" fill="#162840"/>
+  <ellipse cx="80.1" cy="82.3" rx="5.5" ry="2.6" transform="rotate(348 80.1 82.3)" fill="#162840"/>
+  <ellipse cx="38.2" cy="70.1" rx="5.5" ry="2.6" transform="rotate(-85 38.2 70.1)" fill="#162840"/>
+  <ellipse cx="81.8" cy="70.1" rx="5.5" ry="2.6" transform="rotate(265 81.8 70.1)" fill="#162840"/>
+  <ellipse cx="30.0" cy="61.0" rx="5.5" ry="2.6" transform="rotate(-122 30.0 61.0)" fill="#162840"/>
+  <ellipse cx="90.0" cy="61.0" rx="5.5" ry="2.6" transform="rotate(302 90.0 61.0)" fill="#162840"/>
+  <ellipse cx="37.6" cy="51.4" rx="5.5" ry="2.6" transform="rotate(-39 37.6 51.4)" fill="#162840"/>
+  <ellipse cx="82.4" cy="51.4" rx="5.5" ry="2.6" transform="rotate(219 82.4 51.4)" fill="#162840"/>
+  <ellipse cx="38.4" cy="39.2" rx="5.5" ry="2.6" transform="rotate(-76 38.4 39.2)" fill="#162840"/>
+  <ellipse cx="81.6" cy="39.2" rx="5.5" ry="2.6" transform="rotate(256 81.6 39.2)" fill="#162840"/>
+  <text x="60" y="72" text-anchor="middle" font-family="Times New Roman, Times, serif" font-size="32" font-weight="bold" fill="#162840">IV</text>
+  <path d="M48 80H72" stroke="#B99854" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

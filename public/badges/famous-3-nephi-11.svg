@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="3 Nephi 11 badge">
+  <rect x="10" y="10" width="100" height="100" rx="16" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <rect x="18" y="18" width="84" height="84" rx="10" fill="none" stroke="#B99854" stroke-width="3"/>
+  <rect x="24" y="24" width="72" height="72" rx="6" fill="none" stroke="#162840" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M48 28A12 12 0 0 0 72 28Z" fill="#B99854" stroke="#162840" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M34 28H86" stroke="#162840" stroke-width="3" stroke-linecap="round"/>
+  <path d="M45.3 36.5L32.3 44.0M50.0 41.8L41.2 53.9M56.5 44.6L51.7 67.1M63.5 44.6L68.3 67.1M70.0 41.8L78.8 53.9M74.7 36.5L87.7 44.0" stroke="#162840" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="60" cy="82" rx="18" ry="4.5" fill="#B99854" stroke="#162840" stroke-width="2"/>
+</svg>

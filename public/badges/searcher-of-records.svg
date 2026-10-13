@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Searcher of Records badge">
+  <polygon points="14,14 106,14 88,108 32,108" fill="#FBF8F2" stroke="#162840" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="24,22 96,22 81.5,100 38.5,100" fill="none" stroke="#B99854" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="40" y="36" width="40" height="32" fill="#FBF8F2" stroke="#162840" stroke-width="2.5"/>
+  <rect x="36" y="30" width="48" height="8" rx="4" fill="#162840"/>
+  <rect x="36" y="66" width="48" height="8" rx="4" fill="#162840"/>
+  <path d="M47 46H73M47 52H73M47 58H66" stroke="#B99854" stroke-width="2" stroke-linecap="round"/>
+  <path d="M69 86H52M57 81L52 86L57 91" fill="none" stroke="#162840" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Exact Verses: 100 badge">
+  <circle cx="60" cy="60" r="50" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <circle cx="60" cy="60" r="44" fill="#B99854"/>
+  <circle cx="60" cy="60" r="39" fill="none" stroke="#FBF8F2" stroke-width="1.5"/>
+  <circle cx="60" cy="41" r="13" fill="#FBF8F2" stroke="#162840" stroke-width="2.5"/>
+  <circle cx="60" cy="41" r="7.5" fill="none" stroke="#162840" stroke-width="2.5"/>
+  <circle cx="60" cy="41" r="3" fill="#162840"/>
+  <text x="60" y="90" text-anchor="middle" font-family="Times New Roman, Times, serif" font-size="30" font-weight="bold" fill="#162840">100</text>
+</svg>

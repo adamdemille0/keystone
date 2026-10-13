@@ -190,16 +190,19 @@ function shuffled(list, seed) {
 }
 
 // Each level works through its list in a shuffled order, using every verse once before repeating.
-function pickForDay(levelLists, dayIndex) {
+// `earlierDays` are the days already scheduled. Verses they showed earlier in the same cycle are skipped,
+// so editing a list mid-cycle (when some of the cycle's days are locked) doesn't bring a verse back early.
+function pickForDay(levelLists, dayIndex, earlierDays) {
   return levelLists.map((list, level) => {
     const n = list.length;
     const cycle = Math.floor(dayIndex / n);
+    const shown = new Set(earlierDays.slice(cycle * n, dayIndex).map((d) => d.verses[level]));
     const order = shuffled(list, level * 100000 + cycle);
+    const remaining = order.filter((ref) => !shown.has(ref));
+    if (!remaining.length) return order[dayIndex % n];
     // Don't show the same verse two days in a row across a cycle boundary.
-    if (cycle > 0 && n > 2 && order[0] === shuffled(list, level * 100000 + cycle - 1)[n - 1]) {
-      [order[0], order[1]] = [order[1], order[0]];
-    }
-    return order[dayIndex % n];
+    const yesterday = earlierDays[dayIndex - 1]?.verses[level];
+    return remaining[0] === yesterday && remaining.length > 1 ? remaining[1] : remaining[0];
   });
 }
 
@@ -221,7 +224,7 @@ function buildSchedule(levelLists, textByRef) {
   const days = [];
   for (let i = 0; i <= lastIndex; i++) {
     const saved = existing[i];
-    const verses = i <= lockedThrough && saved ? saved.verses : pickForDay(levelLists, i);
+    const verses = i <= lockedThrough && saved ? saved.verses : pickForDay(levelLists, i, days);
     for (const ref of verses) {
       if (!textByRef.has(ref)) fail(`schedule.json day ${i + 1} uses "${ref}", which is not a real verse`);
     }

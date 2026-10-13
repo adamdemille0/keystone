@@ -1,5 +1,14 @@
 import { describe, it, expect } from 'vitest';
-import { scoreGuess, circularDistance, LEVEL_MAX_POINTS } from '../src/scoring.js';
+import {
+  scoreGuess,
+  circularDistance,
+  levelPoints,
+  rankOf,
+  rankOfResult,
+  titleFor,
+  LEVEL_MAX_POINTS,
+  CLOSE_VERSES,
+} from '../src/scoring.js';
 import { referenceToIndex, TOTAL_VERSES } from '../src/reference.js';
 
 const HALF = TOTAL_VERSES / 2;
@@ -47,6 +56,33 @@ describe('scoreGuess', () => {
         expect(scoreGuess(a, b, max)).toBe(scoreGuess(b, a, max));
       }
     }
+  });
+
+  it('ranks guesses from exact to cold', () => {
+    expect(rankOf('Alma 32:21', 'Alma 32:21', 0).id).toBe('exact');
+    expect(rankOf('Alma 32:1', 'Alma 32:21', 20).id).toBe('chapter');
+    expect(rankOf('Alma 1:1', 'Alma 32:21', 900).id).toBe('book');
+    expect(rankOf('Helaman 1:1', 'Alma 63:17', 1).id).toBe('close');
+    expect(rankOf('Helaman 1:1', 'Alma 63:17', CLOSE_VERSES + 1).id).toBe('cold');
+  });
+
+  it('gives a quarter of the points and no exact bonus when a hint was used', () => {
+    expect(levelPoints(500, 500, 400)).toEqual({ points: 475, bonus: 75, max: 400 });
+    expect(levelPoints(500, 500, 400, true)).toEqual({ points: 100, bonus: 0, max: 100 });
+    const far = levelPoints(0, Math.round(HALF / 4), 100, true);
+    expect(far).toEqual({ points: 14, bonus: 0, max: 25 }); // a quarter of 56
+  });
+
+  it('ranks a right-book guess with a hint as "Right book", not exact', () => {
+    expect(rankOfResult({ guessRef: 'Alma 32:21', distance: 0, hint: true }, 'Alma 32:21').label).toBe('Right book');
+    expect(rankOfResult({ guessRef: 'Alma 32:21', distance: 0 }, 'Alma 32:21').id).toBe('exact');
+  });
+
+  it('gives every score a title', () => {
+    expect(titleFor(0)).toBe('Seeker');
+    expect(titleFor(399)).toBe('Searcher');
+    expect(titleFor(400)).toBe('Student');
+    expect(titleFor(1150)).toBe('Keystone');
   });
 
   it('never goes below 0 or above max', () => {

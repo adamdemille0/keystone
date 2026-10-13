@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Sabbath Keeper badge">
+  <polygon points="14,14 106,14 88,108 32,108" fill="#FBF8F2" stroke="#162840" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="24,22 96,22 81.5,100 38.5,100" fill="none" stroke="#B99854" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M54.5 38H65.5L60 24Z" fill="#162840" stroke="#162840" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="55" y="38" width="10" height="16" fill="#FBF8F2" stroke="#162840" stroke-width="2.5"/>
+  <path d="M58.2 47V43.5A1.8 1.8 0 0 1 61.8 43.5V47Z" fill="#162840"/>
+  <path d="M42 86V61L60 47L78 61V86Z" fill="#FBF8F2" stroke="#162840" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M55 86V77A5 5 0 0 1 65 77V86" fill="#162840"/>
+  <circle cx="60" cy="64" r="3.5" fill="#B99854"/>
+  <line x1="37" y1="86" x2="83" y2="86" stroke="#162840" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

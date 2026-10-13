@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="First Exact Verse badge">
+  <circle cx="60" cy="60" r="50" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <circle cx="60" cy="60" r="43" fill="none" stroke="#B99854" stroke-width="2"/>
+  <circle cx="60" cy="60" r="27" fill="#FBF8F2" stroke="#162840" stroke-width="3"/>
+  <circle cx="60" cy="60" r="17" fill="none" stroke="#B99854" stroke-width="3"/>
+  <circle cx="60" cy="60" r="8" fill="none" stroke="#162840" stroke-width="3"/>
+  <circle cx="60" cy="60" r="3.5" fill="#162840"/>
+</svg>

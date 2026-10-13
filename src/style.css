@@ -62,6 +62,7 @@ img {
 /* Small uppercase label, echoing "DAILY BOOK OF MORMON SEARCH" in the logo. */
 .eyebrow,
 .card .label,
+.progress .label,
 .breakdown th {
   font-size: 0.78rem;
   letter-spacing: 0.18em;
@@ -190,6 +191,20 @@ button.secondary {
   border: 1px solid var(--navy);
 }
 
+/* Small "‹ Home" link at the top of list screens. */
+button.back-link {
+  align-self: flex-start;
+  width: auto;
+  min-height: 44px;
+  margin: -14px 0 -10px -4px;
+  padding: 0 4px;
+  background: none;
+  color: var(--navy-soft);
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 button:focus-visible,
 select:focus-visible {
   outline: 2px solid var(--gold);
@@ -267,6 +282,50 @@ select {
   color: var(--navy);
 }
 
+/* ---------- Hint ---------- */
+
+.hint-box {
+  margin: 0;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: var(--paper);
+  border: 1px dashed var(--gold);
+  border-radius: var(--radius);
+  text-align: center;
+  font-style: italic;
+  animation: rise 0.4s ease-out both;
+}
+
+.hint-box .hint-ref {
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+button.hint-button {
+  border-style: dashed;
+  border-color: var(--gold);
+  color: var(--navy-soft);
+}
+
+button.hint-button.confirm {
+  border-style: solid;
+  color: var(--navy);
+  letter-spacing: 0.08em;
+}
+
+.guess-error {
+  margin: -4px 0 0;
+  color: var(--navy);
+  font-style: italic;
+}
+
+.guess-error:empty {
+  display: none;
+}
+
 /* ---------- Result ---------- */
 
 .card {
@@ -306,10 +365,191 @@ select {
   text-align: center;
 }
 
-.points span,
-.total span {
+.points .of,
+.total .of {
   font-size: 1.1rem;
   color: var(--navy-soft);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Closeness meter: fills to the share of the level's points earned (before any bonus). */
+.meter {
+  height: 8px;
+  margin: 4px 0 14px;
+  background: var(--tan);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  width: var(--fill);
+  background: linear-gradient(90deg, var(--navy-soft), var(--navy));
+  border-radius: 999px;
+  animation: fill 0.9s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+
+@keyframes fill {
+  from {
+    width: 0;
+  }
+}
+
+/* Rank stamp: lands once the meter and points finish. */
+.card .rank {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 4px 16px;
+  border: 1.5px solid var(--navy);
+  border-radius: var(--radius);
+  font-size: 1.05rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  animation: stamp 0.35s cubic-bezier(0.3, 1.6, 0.5, 1) 0.9s both;
+}
+
+.card .rank-exact {
+  background: var(--navy);
+  color: var(--tan);
+  box-shadow: 0 0 0 4px var(--paper), 0 0 0 5.5px var(--gold);
+}
+
+.card .rank-chapter {
+  border-color: var(--gold);
+  box-shadow: inset 0 0 0 1.5px var(--gold);
+}
+
+.card .rank-book {
+  border-color: var(--gold);
+}
+
+.card .rank-close,
+.card .rank-cold {
+  border-color: var(--line);
+  color: var(--navy-soft);
+}
+
+@keyframes stamp {
+  from {
+    opacity: 0;
+    transform: scale(1.8) rotate(-6deg);
+  }
+}
+
+.card .bonus {
+  margin-top: 6px;
+  font-style: italic;
+  color: var(--navy-soft);
+  animation: rise 0.4s ease-out 1.2s both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* Context dropdown under a level's result. */
+.context {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.context summary {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.context summary::-webkit-details-marker {
+  display: none;
+}
+
+.context summary::before {
+  content: '›';
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--gold);
+  transition: transform 0.2s ease;
+}
+
+.context[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.context summary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.context p {
+  margin: 0;
+  padding: 0 16px 14px;
+  line-height: 1.6;
+}
+
+.context[open] p:first-of-type {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  animation: rise 0.3s ease-out both;
+}
+
+.context .context-sources {
+  font-size: 0.85rem;
+  color: var(--navy-soft);
+}
+
+.context a {
+  color: var(--navy);
+  text-decoration-color: var(--gold);
+  text-underline-offset: 3px;
+}
+
+/* The same dropdown under each level in a day's score table. */
+.breakdown tr.has-context td {
+  border-bottom: none;
+  padding-bottom: 4px;
+}
+
+.breakdown .context-row td {
+  padding: 0 12px 12px;
+}
+
+.breakdown .context {
+  background: var(--tan);
+}
+
+.breakdown .context summary {
+  min-height: 40px;
+  padding: 0 12px;
+  font-size: 0.75rem;
+}
+
+.breakdown .context p {
+  padding: 0 12px 12px;
+  font-size: 0.95rem;
+}
+
+.breakdown .context[open] p:first-of-type {
+  padding-top: 10px;
 }
 
 /* ---------- Archive ---------- */
@@ -347,10 +587,310 @@ select {
 
 /* ---------- Final ---------- */
 
-.new-best {
+.progress {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   text-align: center;
-  font-style: italic;
+}
+
+.progress > div {
+  padding: 16px 8px;
+}
+
+.progress > div + div {
+  border-left: 1px solid var(--line);
+}
+
+.progress p {
   margin: 0;
+}
+
+.progress .big {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.progress .label {
+  margin-top: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.progress .pop {
+  animation: pop 0.5s cubic-bezier(0.3, 1.8, 0.5, 1) 1.4s both;
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.5);
+    color: var(--gold);
+  }
+}
+
+.title-line {
+  margin: -6px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.title-line .title {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.new-records {
+  padding: 12px 16px;
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  background: var(--paper);
+  text-align: center;
+}
+
+.new-records p {
+  margin: 0;
+}
+
+/* After a game is finished, the title and new records arrive once the total has counted up. */
+.celebrate .title-line {
+  animation: rise 0.5s ease-out 0.9s both;
+}
+
+.celebrate .new-records {
+  animation: rise 0.5s ease-out 1.2s both;
+}
+
+/* ---------- Records and badges ---------- */
+
+.badge-grid {
+  list-style: none;
+  margin: -6px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.badge {
+  padding: 14px 10px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.badge img {
+  width: 84px;
+  margin: 0 auto 6px;
+}
+
+.badge p {
+  margin: 0;
+  line-height: 1.3;
+}
+
+.badge .muted {
+  font-size: 0.82rem;
+  margin-top: 4px;
+}
+
+.badge-name {
+  font-size: 1rem;
+}
+
+.badge.locked img {
+  filter: grayscale(1);
+  opacity: 0.3;
+}
+
+.badge .badge-count {
+  margin-top: 2px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy-soft);
+}
+
+.group-name {
+  margin: 6px 0 -8px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.group-note {
+  margin: 0 0 -6px;
+}
+
+/* Book stamps: a passport page, 5 to a row. */
+.stamp-grid {
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.stamp-grid img {
+  width: 100%;
+}
+
+.stamp-grid .locked img {
+  filter: grayscale(1);
+  opacity: 0.3;
+}
+
+.next-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  background: var(--paper);
+  border: 1px dashed var(--gold);
+  border-radius: var(--radius);
+}
+
+.next-badge img {
+  width: 56px;
+  flex: none;
+  filter: grayscale(1);
+  opacity: 0.45;
+}
+
+.next-badge p {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.record-table th {
+  font-size: 1rem;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--navy);
+}
+
+.records .eyebrow {
+  text-align: left;
+}
+
+/* Badge reveal: a gold burst turns behind the badge as it drops in. */
+.badge-reveal {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgb(22 40 64 / 0.6);
+  animation: fade 0.3s ease-out both;
+}
+
+.badge-reveal-card {
+  width: 100%;
+  max-width: 340px;
+  padding: 24px 20px 20px;
+  background: var(--paper);
+  border-top: 2px solid var(--gold);
+  border-radius: var(--radius);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: rise 0.4s ease-out both;
+}
+
+.badge-reveal-card p {
+  margin: 0;
+}
+
+/* Several badges at once: they drop in one after another. */
+.reveal-grid {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px 8px;
+  max-height: 55vh;
+  overflow-y: auto;
+}
+
+.reveal-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  animation: drop-in 0.6s cubic-bezier(0.3, 1.5, 0.5, 1) both;
+  animation-delay: calc(0.3s + min(var(--i), 15) * 0.12s);
+}
+
+.reveal-grid img {
+  width: 72px;
+}
+
+.badge-burst {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-burst::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-conic-gradient(rgb(185 152 84 / 0.35) 0 10deg, transparent 10deg 30deg);
+  mask: radial-gradient(circle, #000 30%, transparent 70%);
+  animation:
+    fade 0.6s ease-out 0.5s both,
+    spin 14s linear infinite;
+}
+
+.badge-burst img {
+  position: relative;
+  width: 150px;
+  animation: drop-in 0.8s cubic-bezier(0.3, 1.5, 0.5, 1) 0.2s both;
+}
+
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.2) rotate(-25deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before {
+    animation: none !important;
+  }
 }
 
 .breakdown {

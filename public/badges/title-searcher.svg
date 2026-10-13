@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Searcher title badge">
+  <circle cx="60" cy="60" r="50" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <circle cx="60" cy="60" r="43" fill="none" stroke="#B99854" stroke-width="2"/>
+  <circle cx="54" cy="54" r="15" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <path d="M46 50A9 9 0 0 1 52 45" fill="none" stroke="#B99854" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M65 65L80 80" stroke="#162840" stroke-width="7" stroke-linecap="round"/>
+</svg>

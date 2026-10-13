@@ -78,10 +78,11 @@ describe('share text', () => {
       { points: 0, max: 400 },
     ];
     const text = shareText(12, results, 1000, 'https://example.com');
-    expect(text).toBe('Keystone #12 · 440/1,000\n🎯🟩🟨🟥\nhttps://example.com');
+    expect(text).toBe('Keystone #12 · Student · 440/1,000\n🎯🟩🟨🟥\nhttps://example.com');
   });
 
   it('picks emoji by share of max points', () => {
+    expect(levelEmoji(175, 100)).toBe('🎯'); // exact, with bonus
     expect(levelEmoji(39, 400)).toBe('🟥');
     expect(levelEmoji(40, 400)).toBe('🟧');
   });

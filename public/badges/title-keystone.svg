@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Keystone title badge">
+  <circle cx="60" cy="60" r="50" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <circle cx="60" cy="60" r="44" fill="#B99854"/>
+  <circle cx="60" cy="60" r="39" fill="none" stroke="#FBF8F2" stroke-width="1.5"/>
+  <path d="M32 72A28 28 0 0 1 88 72H76A16 16 0 0 0 44 72Z" fill="#FBF8F2" stroke="#162840" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M48.7,60.7L40.2,52.2M71.3,60.7L79.8,52.2" stroke="#162840" stroke-width="2.5"/>
+  <polygon points="52.3,41.0 67.7,41.0 62.1,57.1 57.9,57.1" fill="#162840" stroke="#162840" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M32 72V86M44 72V86M76 72V86M88 72V86M28 86H92" fill="none" stroke="#162840" stroke-width="3" stroke-linecap="round"/>
+</svg>

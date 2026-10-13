@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Right Book badge">
+  <circle cx="60" cy="60" r="50" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <circle cx="60" cy="60" r="43" fill="none" stroke="#B99854" stroke-width="2"/>
+  <rect x="41" y="32" width="38" height="54" rx="3" fill="#FBF8F2" stroke="#162840" stroke-width="3"/>
+  <rect x="41" y="32" width="8" height="54" rx="2" fill="#162840"/>
+  <path d="M54 59L61 66L73 51" fill="none" stroke="#B99854" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

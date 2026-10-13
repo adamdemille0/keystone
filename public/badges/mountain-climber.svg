@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Mountain Climber badge">
+  <circle cx="60" cy="60" r="50" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <circle cx="60" cy="60" r="43" fill="none" stroke="#B99854" stroke-width="2"/>
+  <path d="M27 84L53 46L63 60L71 50L93 84Z" fill="#FBF8F2" stroke="#162840" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M46 56L53 46L60 56L56 54L53 58L50 54Z" fill="#162840" stroke="#162840" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M53 46V27" stroke="#162840" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M53 28L68 33L53 38Z" fill="#B99854" stroke="#162840" stroke-width="2" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Pioneer badge">
+  <path d="M16 12H104V54C104 82 85 99 60 110C35 99 16 82 16 54Z" fill="#FBF8F2" stroke="#162840" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M25 21H95V54C95 76 80 90 60 100C40 90 25 76 25 54Z" fill="none" stroke="#B99854" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M38 58V44C38 36 44 32 50 34C55 31 65 31 70 34C76 32 82 36 82 44V58Z" fill="#FBF8F2" stroke="#162840" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M50 34V58M60 32V58M70 34V58" stroke="#B99854" stroke-width="2" stroke-linecap="round"/>
+  <rect x="34" y="58" width="52" height="9" rx="1.5" fill="#162840"/>
+  <circle cx="45" cy="74" r="8" fill="#FBF8F2" stroke="#162840" stroke-width="3"/>
+  <path d="M37 74H53M45 66V82" stroke="#162840" stroke-width="1.8"/>
+  <circle cx="75" cy="74" r="8" fill="#FBF8F2" stroke="#162840" stroke-width="3"/>
+  <path d="M67 74H83M75 66V82" stroke="#162840" stroke-width="1.8"/>
+  <text x="60" y="95" text-anchor="middle" font-family="Times New Roman, Times, serif" font-size="11" font-weight="bold" letter-spacing="1" fill="#162840">2026</text>
+</svg>

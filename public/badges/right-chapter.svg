@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Right Chapter badge">
+  <circle cx="60" cy="60" r="50" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <circle cx="60" cy="60" r="43" fill="none" stroke="#B99854" stroke-width="2"/>
+  <path d="M60 44C52 38 40 38 32 41V73C40 70 52 70 60 76C68 70 80 70 88 73V41C80 38 68 38 60 44ZM60 44V76" fill="#FBF8F2" stroke="#162840" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M68 40V88L72 84L76 88V39.5" fill="#B99854" stroke="#162840" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

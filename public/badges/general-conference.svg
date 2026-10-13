@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="General Conference badge">
+  <path d="M16 12H104V54C104 82 85 99 60 110C35 99 16 82 16 54Z" fill="#FBF8F2" stroke="#162840" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M25 21H95V54C95 76 80 90 60 100C40 90 25 76 25 54Z" fill="none" stroke="#B99854" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M60 41C56 38 50 38 46 39V46C50 45 56 45 60 48C64 45 70 45 74 46V39C70 38 64 38 60 41ZM60 41V48" fill="#FBF8F2" stroke="#162840" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 50H80L76 57H44Z" fill="#162840" stroke="#162840" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M46 57H74L71 88H49Z" fill="#FBF8F2" stroke="#162840" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="60" cy="70" r="5" fill="#B99854" stroke="#162840" stroke-width="2"/>
+  <path d="M76 50C76 42 79 36 82 32" fill="none" stroke="#162840" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="83" cy="29.5" rx="3" ry="4" transform="rotate(30 83 29.5)" fill="#162840"/>
+  <path d="M42 88H78" stroke="#162840" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="First Step badge">
+  <polygon points="14,14 106,14 88,108 32,108" fill="#FBF8F2" stroke="#162840" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="24,22 96,22 81.5,100 38.5,100" fill="none" stroke="#B99854" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="60" cy="33" r="4" fill="#B99854"/>
+  <ellipse cx="60" cy="48" rx="7" ry="3" fill="none" stroke="#162840" stroke-width="2.5"/>
+  <ellipse cx="60" cy="63" rx="10.5" ry="4.5" fill="none" stroke="#162840" stroke-width="2.5"/>
+  <ellipse cx="60" cy="82" rx="15" ry="6.5" fill="#162840"/>
+</svg>

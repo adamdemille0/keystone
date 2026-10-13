@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Christmas badge">
+  <path d="M16 12H104V54C104 82 85 99 60 110C35 99 16 82 16 54Z" fill="#FBF8F2" stroke="#162840" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M25 21H95V54C95 76 80 90 60 100C40 90 25 76 25 54Z" fill="none" stroke="#B99854" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="60.0,25.0 62.7,43.5 68.5,41.5 66.5,47.3 85.0,50.0 66.5,52.7 68.5,58.5 62.7,56.5 60.0,82.0 57.3,56.5 51.5,58.5 53.5,52.7 35.0,50.0 53.5,47.3 51.5,41.5 57.3,43.5" fill="#B99854" stroke="#162840" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="36" cy="34" r="2.2" fill="#162840"/>
+  <circle cx="84" cy="36" r="2.2" fill="#162840"/>
+  <circle cx="38" cy="66" r="1.8" fill="#162840"/>
+  <circle cx="82" cy="64" r="1.8" fill="#162840"/>
+</svg>

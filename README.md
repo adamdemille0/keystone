@@ -13,7 +13,30 @@ Each day's game has 4 levels worth 100, 200, 300, and 400 points (1,000 total).
 - Results live in the player's browser (localStorage), so they don't carry over between devices.
 - **Test mode (currently OFF):** setting `TEST_MODE` to `true` at the top of `src/storage.js` keeps
   results in memory only, so refreshing the page lets you replay any day. Keep it `false` when live.
-- **Share result** copies a spoiler-free summary (e.g. `Keystone #12 · 812/1,000` plus one emoji per level).
+- **Share result** copies a spoiler-free summary (e.g. `Keystone #12 · Record Keeper · 812/1,000` plus one emoji per level).
+
+## Streaks, records, and badges
+
+All worked out from the saved results in `src/progress.js`; nothing extra is needed from a server.
+
+- **Day streak:** consecutive days on which that day's game was finished on that day. Catching up through
+  Past games doesn't count toward it. Missing today doesn't break the streak until midnight.
+- **Points, last 7 days:** today's game plus the 6 before it, including ones caught up on later.
+- **Title:** every final score gets one (`TITLES` in `src/scoring.js`): Seeker, Searcher, Student,
+  Scholar, Record Keeper, Keystone.
+- **Personal records** (Records & badges screen): best game, best 7 days, longest streak, exact verses
+  found, and best score on each level. Beating one shows a "New personal record" banner (not on someone's
+  first game).
+- **Badges (61):** defined in `src/badges.js`, in five groups: showing up (games played, Iron Rod streaks,
+  Full Week, Sabbath Keeper, Welcome Back, Searcher of Records, Missionary shares), getting better (ranks,
+  exact verses, titles, Perfect Game, Mountain Climber, Personal Best), book stamps (one per book),
+  collections (Every Book, Small Plates, Tiny Books, famous chapters), and special days (Christmas,
+  Easter, General Conference, Pioneer). New badges are celebrated once, after finishing a game or sharing.
+  Because badges are worked out from saved history, adding a badge awards it for past games too (except
+  shares and play dates, which are only recorded from when they were added).
+- **Next badge:** the final screen suggests the closest badge earned just by playing (never a guessing badge).
+- Art lives in `public/badges/<id>.svg` (a test checks every badge has art). Every book must appear in
+  `level-picks.json`, or Every Book can't be earned (a test checks this too).
 
 ## Running locally
 
@@ -44,6 +67,10 @@ before any repeats, so a level with 15 verses repeats every 15 days.
 - **Commit `schedule.json`** after running the script, so the live site keeps the same past days.
 - To see what's coming up, open `schedule.json`: there's one line per day with its date and 4 verses.
 - The script stops with an error if a reference doesn't exist (e.g. `Alma 70:1`) or is listed twice.
+- **Every verse also needs a context paragraph** in `data/verse-context.json`: who is speaking, to whom,
+  what they're saying, and the main point, in 5 to 6 sentences, with links to the Come, Follow Me lesson
+  and Book of Mormon Student Manual chapter it draws on. Players see it in a "Context" dropdown after
+  each guess. `npm test` fails if a verse in `level-picks.json` has no context.
 - The day-1 date is `START_DATE` in `scripts/build-data.mjs`. Don't change it after launch.
 
 ## How it works
@@ -58,7 +85,9 @@ before any repeats, so a level with 15 verses repeats every 15 days.
 | `src/reference.js` | Converts between a reference (`Alma 32:21`) and a verse index (0 to 6603). |
 | `src/scoring.js` | Scoring. **`K`** at the top controls how steeply points fall off with distance. |
 | `src/daily.js` | Day numbers, dates, and each day's puzzle. |
-| `src/storage.js` | Each day's progress and results, plus best score and games played (localStorage). |
+| `src/storage.js` | Each day's progress and results, the date each game was finished, and which badge reveals have been shown (localStorage). |
+| `src/progress.js` | Streaks, 7-day points, and personal records. |
+| `src/badges.js` | Every badge and how it's earned, plus the "next badge" suggestion. |
 | `src/share.js` | The share text and share/copy button. |
 | `src/main.js` | Screens and UI. |
 | `brand/keystone-logo.png` | Original logo (not shipped). |
@@ -82,6 +111,15 @@ score    = round(maxPoints * (1 - fraction) ** K)
 
 At `K = 2`, a 100-point level gives: exact 100, an eighth of the circle off (about 825 verses) 56,
 a quarter off 25, opposite side 0. Raise `K` to make scoring harsher, lower it to make it gentler.
+
+**Hint:** on any level, a player can tap the hint button twice to see the chapter and verse, leaving only
+the book to guess. That level is then worth a quarter of its points (`HINT_FACTOR`) and there's no exact-verse bonus. The hint is saved as
+soon as it's shown, so leaving and coming back doesn't undo it. A right-book guess with a hint is ranked
+"Right book", so it earns book stamps but not exact-verse or chapter badges. It shows as 💡 when shared.
+
+An exact verse earns an extra `EXACT_BONUS` (75) points on top. Totals are still shown out of 1,000,
+so a great day can go over. Each guess is also ranked: Exact, Same chapter, Same book, Close (wrong book
+but within `CLOSE_VERSES`, 250 verses), or Cold.
 
 ## Deploying to Cloudflare Pages
 

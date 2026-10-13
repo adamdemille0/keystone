@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Every Book badge">
+  <rect x="10" y="10" width="100" height="100" rx="16" fill="#FBF8F2" stroke="#162840" stroke-width="4"/>
+  <rect x="18" y="18" width="84" height="84" rx="10" fill="#B99854"/>
+  <rect x="24" y="24" width="72" height="72" rx="6" fill="none" stroke="#FBF8F2" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="31" y="43" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="43" y="43" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="55" y="43" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="67" y="43" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="79" y="43" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="31" y="55" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="43" y="55" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="55" y="55" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="67" y="55" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="79" y="55" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="31" y="67" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="43" y="67" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="55" y="67" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="67" y="67" width="9" height="9" rx="2" fill="#162840"/>
+  <rect x="79" y="67" width="9" height="9" rx="2" fill="#162840"/>
+</svg>
